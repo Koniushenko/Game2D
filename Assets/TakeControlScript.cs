@@ -17,8 +17,9 @@ public class TakeControlScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
-        
+    {
+ // checking the ball
+
         if (!fallingBall)
         {
             if (Input.GetKey(KeyCode.RightArrow)&& (transform.localPosition.x <= -100))
