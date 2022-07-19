@@ -19,6 +19,7 @@ public class TakeControlScript : MonoBehaviour
     void Update()
     {
  // checking the ball
+ // NEW!!!
 
         if (!fallingBall)
         {
