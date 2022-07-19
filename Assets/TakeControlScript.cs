@@ -10,6 +10,7 @@ public class TakeControlScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transform.localPosition = startPoint;
         this.GetComponent<Rigidbody2D>().gravityScale = 0;
         fallingBall = false;
     }
@@ -20,12 +21,12 @@ public class TakeControlScript : MonoBehaviour
         
         if (!fallingBall)
         {
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow)&& (transform.localPosition.x <= -100))
             {
                 transform.localPosition += scaleChange;
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if ((Input.GetKey(KeyCode.LeftArrow))&& (transform.localPosition.x >= -350))
             {
                 transform.localPosition -= scaleChange;
             }
